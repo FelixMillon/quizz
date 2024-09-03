@@ -1,0 +1,30 @@
+<body>
+    <div class="result-content">
+        <p class="result-text">Votre résultat est : {{ mention }}</p>
+        <div class="result-value">{{ result }}</div>
+        <a routerLink="/quizz" class="retry-link">Miaou-recommençons !</a>
+        <div *ngIf="mention == 'excellent'">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhFlj-gSust6-OO59tsBlza8MXJslDCxYLgg&s" class="cat-icon">
+        </div>
+        <div *ngIf="mention == 'bon'">
+            <img src="https://www.thesprucepets.com/thmb/s-wcx5m6Sg6y8r3EFrYfikLqJIg=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txpba7ef914jvq100_Medium_1493631-5a8ef3d404d1cf003616d6f3.jpg" class="cat-icon">
+        </div>
+        
+        <div *ngIf="mention == 'moyen'">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIu9Wj3afKwlaE5PWW57monfiFtuj4e6EnOA&s" class="cat-icon">
+        </div>
+        
+        <div *ngIf="mention == 'mauvais'">
+            <img src="https://render.fineartamerica.com/images/rendered/default/poster/8/5.5/break/images-medium-5/unhappy-cat-zandria-muench-beraldo.jpg" class="cat-icon">
+        </div>
+        
+        <div *ngIf="mention == 'nul'">
+            <img src="https://media.istockphoto.com/id/525982128/fr/photo/le-chat-agression.jpg?s=612x612&w=0&k=20&c=qhKGkMu1xNVT4IXwYnAKgpMb7EGswkTJOLS7TwXu-wo=" class="cat-icon">
+        </div>
+
+        <div *ngIf="mention == 'undefined'">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcQfQ-XWPLqZ0R8gdJ5YoAgZifF91tycjiA&s" class="cat-icon">
+        </div>
+    </div>
+
+</body>

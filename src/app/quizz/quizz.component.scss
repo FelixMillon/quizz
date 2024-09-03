@@ -1,0 +1,57 @@
+/* Style global pour le questionnaire */
+div {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style pour les listes de réponses */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style pour les inputs radio */
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007bff; /* Couleur personnalisée pour les radios */
+}
+
+/* Style pour le bouton de calcul du score */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour le bouton de réinitialisation */
+button + button {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+button + button:hover {
+    background-color: #c82333;
+}
