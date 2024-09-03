@@ -3,10 +3,15 @@
     <nav>
         <ul>
             <li><a routerLink="/">Miaccueil</a></li>
+            <li  *ngIf="!name" ><a routerLink="/register">Register</a></li>
+            <li  *ngIf="!name" ><a routerLink="/login">Login</a></li>
             <li><a href="#about">À propos</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <p *ngIf="name">Tu es connecté {{ name }}</p>
+        <p *ngIf="!name">Tu es deconnecté</p>
     </nav>
     <button class="contact-button">Contactez-nous</button>
-</header>
+    <button *ngIf="name" class="contact-button" (click)="this.disconnect()">Deconnection</button>
+</header>   

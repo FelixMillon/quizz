@@ -1,30 +1,34 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizzService } from '../quizz.service';
-
 @Component({
   selector: 'app-quizz',
   templateUrl: './quizz.component.html',
   styleUrls: ['./quizz.component.scss']
 })
-export class QuizzComponent {
+export class QuizzComponent{
   constructor(
     private router: Router,
-    private quizzService: QuizzService
-) { }
+    private quizzService: QuizzService,
+) {}
+
+// faire getter coté service
+// subscribe ici pour maj questionnaire
   questionnaire = this.quizzService.questionnaire
+
   userAnswers = this.quizzService.userAnswers
   score = this.quizzService.score
-  calculateScore(){
+
+  async calculateScore(){
     this.quizzService.calculateScore()
   }
   resetAnswers(){
     this.quizzService.resetAnswers()
   }
-  addResponse(key: number, resp: string){
-    this.quizzService.addResponse(key,resp)
-  }
-  redirectToResult() {
+
+  async redirectToResult() {
+    await this.quizzService.calculateScore()
     this.router.navigate(['/resultat']);
   }
+
 }

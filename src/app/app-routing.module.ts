@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { ResultatComponent } from './resultat/resultat.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: "resultat",
     component: ResultatComponent
+  },
+  {
+    path: "register",
+    component: RegisterComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
   }
 ];
 

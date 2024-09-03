@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let reponse of reponses">
+        <input
+        type="radio"
+        [name]="'question' + i"
+        [value]="reponse"
+        (change)="this.addResponse(i, reponse)"
+        >
+        {{ reponse }}
+    </li>
+</ul>
