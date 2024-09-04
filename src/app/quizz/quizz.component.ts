@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { QuizzService } from '../quizz.service';
+import { QuizzService } from '../services/quizz.service';
 @Component({
   selector: 'app-quizz',
   templateUrl: './quizz.component.html',
@@ -14,6 +14,7 @@ export class QuizzComponent{
 
 // faire getter coté service
 // subscribe ici pour maj questionnaire
+  startDate = new Date()
   questionnaire = this.quizzService.questionnaire
 
   userAnswers = this.quizzService.userAnswers

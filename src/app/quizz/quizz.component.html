@@ -1,10 +1,9 @@
 <div *ngIf="!questionnaire">Chargement...</div>
 <div *ngIf="questionnaire">
     <div *ngFor="let item of questionnaire | async; let i = index">
-        <app-question [question]="item" [i]="i"></app-question>
+        <app-question [question]="item" [i]="i" [startDate]="startDate"></app-question>
     </div>
 </div>
-
 <div>
     <button (click)="this.calculateScore();this.redirectToResult();" >Afficher le score</button>
 </div>

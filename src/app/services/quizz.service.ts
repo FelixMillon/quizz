@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Question } from './types'
+import { Question } from '../types'
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -13,7 +13,6 @@ export class QuizzService {
   userAnswers: { [key: number]: string } = {};
   scoreSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   score?: number;
-
   calculateScore(){
     let score = 0;
     this.questionnaire.subscribe((data) => {

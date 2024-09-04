@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Question } from '../types'
-import { QuizzService } from '../quizz.service';
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
@@ -13,5 +12,5 @@ export class QuestionComponent {
     correct: ''
   }
   @Input() i: number = 0
-
+  @Input() startDate: Date = new Date()
 }

@@ -1,5 +1,7 @@
 <body>
     <div class="result-content">
+        <p>{{date | date:'dd/MM/YYYY'}}</p>
+        <p>{{date | date:'hh:mm:ss'}}</p>
         <p class="result-text">Votre résultat est : {{ mention }}</p>
         <div class="result-value">{{ result }}</div>
         <a routerLink="/quizz" class="retry-link">Miaou-recommençons !</a>

@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
-import { User } from "./types"
+import { HttpClient } from '@angular/common/http';
+import { User } from "../types"
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor() { }
+  constructor( private httpClient:HttpClient ) { }
   name = ""
+
   register(user: User){
     if(typeof(user.password) != "string"){
       throw new Error()
     }
-    localStorage.setItem('name', user.name);
-    localStorage.setItem('email', user.email);
-    localStorage.setItem('password', user.password);
+    this.httpClient.post<User>('http://localhost:3000/users', user).subscribe();;
   }
-  checkPassword(password: string): boolean{
-    if(password == localStorage.getItem("password")){
-      return true
+  login(user: User){
+    if(typeof(user.password) != "string"){
+      throw new Error()
     }
-    return false
+    return this.httpClient.get<User>('http://localhost:3000/users?username=' + user.email + '&password=' + user.password);
   }
   getName(){
     const name =  localStorage.getItem("name")

@@ -7,12 +7,17 @@
     <label for="email">Email :</label>
     <input id="email" formControlName="email" />
     <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
-      Email est requis et doit être valide.
+      
     </div>
     <label for="password">Mot de passe :</label>
     <input id="password" type="password" formControlName="password" />
     <div *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
       Le mot de passe doit avoir au moins 8 caractères.
     </div>
+    <label for="confirmPassword">Confirmer le mot de passe :</label>
+    <input id="confirmPassword" type="password" formControlName="confirmPassword" />
+    <p *ngIf="myForm.invalid && (myForm.touched || myForm.dirty)" class="register_error">
+      {{ getErrorLabel }}
+    </p>
     <button type="submit">Soumettre</button>
 </form>

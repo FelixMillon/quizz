@@ -1,4 +1,4 @@
-<ul>
+<ul appNameResponse>
     <li *ngFor="let reponse of reponses">
         <input
         type="radio"
@@ -9,3 +9,4 @@
         {{ reponse }}
     </li>
 </ul>
+<p *ngIf="responsed"> repondu en : {{ this.startDate | timer}} secondes</p>

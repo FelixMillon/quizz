@@ -12,9 +12,11 @@ import { ResultatComponent } from './resultat/resultat.component';
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionComponent } from './question/question.component';
 import { ReponseComponent } from './reponse/reponse.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TimerPipe } from './timer.pipe';
+import { NameResponseDirective } from './name-response.directive';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReponseComponent,
     RegisterComponent,
     LoginComponent,
+    TimerPipe,
+    NameResponseDirective,
   ],
   imports: [
     BrowserModule,

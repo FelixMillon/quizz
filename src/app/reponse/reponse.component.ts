@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { QuizzService } from '../quizz.service';
+import { QuizzService } from '../services/quizz.service';
 @Component({
   selector: 'app-reponse',
   templateUrl: './reponse.component.html',
@@ -7,11 +7,15 @@ import { QuizzService } from '../quizz.service';
 })
 export class ReponseComponent {
   constructor(
-    private quizzService: QuizzService,
+    private quizzService: QuizzService
   ) {}
   @Input() reponses: string[] = []
   @Input() i: number = 0
+  @Input() startDate: Date = new Date()
+  responsed = false
   addResponse(key: number, resp: string){
+    this.responsed = false;
+    this.responsed = true;
     this.quizzService.addResponse(key,resp)
   }
 }

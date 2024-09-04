@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizzService } from '../quizz.service';
+import { QuizzService } from '../services/quizz.service';
 @Component({
   selector: 'app-resultat',
   templateUrl: './resultat.component.html',
@@ -17,10 +17,11 @@ export class ResultatComponent implements OnInit {
     });
   }
   result = this.quizzService.score
+  date? : Date
   mention = "undefined"
   getMention(score: number): string{
     this.result = this.quizzService.score
-    console.log(this.result)
+    this.date = new Date()
     if(typeof this.result === 'number'){
       if(this.result == 10){
         return "excellent"
