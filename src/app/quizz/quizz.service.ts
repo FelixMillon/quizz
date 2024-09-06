@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Question, Response, Questionnaire } from '../types'
+import { Question, Response, Questionnaire } from '../shared/types'
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({

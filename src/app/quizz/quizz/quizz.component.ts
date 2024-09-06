@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizzService } from '../quizz.service';
 import { ConfirmComponent } from '../../shared/popup/confirm/confirm.component';
-import { Questionnaire, Response } from '../../types';
+import { Questionnaire, Response } from '../../shared/types';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-quizz',

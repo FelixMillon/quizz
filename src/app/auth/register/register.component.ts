@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms'; 
-import { User } from "../../types"
-import { UserService } from '../../shared/user.service';
+import { User } from "../../shared/types"
+import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 
 @Component({

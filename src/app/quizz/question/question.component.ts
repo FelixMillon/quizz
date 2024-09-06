@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Question } from '../../types'
+import { Question } from '../../shared/types'
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',

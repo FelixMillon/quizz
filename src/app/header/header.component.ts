@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../shared/user.service';
+import { UserService } from '../auth/user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
