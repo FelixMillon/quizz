@@ -10,12 +10,12 @@ export class NameResponseDirective {
   ngAfterViewInit() {
     // Sélectionner tous les boutons radio dans le document
     
-    const lis = this.el.nativeElement.querySelectorAll('li');
+    const spans = this.el.nativeElement.querySelectorAll('span');
     let i=0
-    lis.forEach(
-      (li: any) =>{
+    spans.forEach(
+      (span: any) =>{
         let letter = String.fromCharCode('a'.charCodeAt(0) + (i)) + ". "
-        li.lastChild.nodeValue = letter + li.lastChild.nodeValue
+        span.lastChild.nodeValue = letter + span.lastChild.nodeValue
         i++
       }
     )

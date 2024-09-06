@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { QuizzComponent } from './quizz/quizz.component';
-import { ResultatComponent } from './resultat/resultat.component';
+import { QuizzComponent } from './quizz/quizz/quizz.component';
+import { ResultatComponent } from './quizz/resultat/resultat.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 

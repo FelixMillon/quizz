@@ -1,0 +1,61 @@
+/* Style pour le pied de page */
+footer {
+    background-color: #2c3e50; /* Couleur de fond sombre pour le pied de page */
+    color: #ffffff; /* Couleur du texte */
+    padding: 20px 0;
+    text-align: center; /* Centre le texte */
+  }
+  
+  /* Conteneur pour organiser les éléments du pied de page */
+  footer .container {
+    max-width: 1200px; /* Limite la largeur du pied de page */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 0 20px;
+  }
+  
+  /* Style pour les liens sociaux */
+  .social-links {
+    margin-bottom: 20px;
+  }
+  
+  .social-links a {
+    color: #ffffff; /* Couleur du texte des liens sociaux */
+    text-decoration: none; /* Supprime la sous-ligne des liens */
+    font-size: 18px; /* Taille de la police des liens sociaux */
+    margin: 0 10px; /* Espacement entre les icônes */
+    transition: color 0.3s ease; /* Transition pour l'effet de survol */
+  }
+  
+  .social-links a:hover {
+    color: #3498db; /* Couleur des liens sociaux au survol */
+  }
+  
+  /* Style pour les icônes sociales */
+  .social-links i {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+  }
+  
+  /* Style pour les liens de navigation */
+  .nav-links {
+    margin-bottom: 20px;
+  }
+  
+  .nav-links a {
+    color: #ffffff; /* Couleur du texte des liens de navigation */
+    text-decoration: none; /* Supprime la sous-ligne des liens */
+    font-size: 16px; /* Taille de la police des liens de navigation */
+    margin: 0 15px; /* Espacement entre les liens */
+    transition: color 0.3s ease; /* Transition pour l'effet de survol */
+  }
+  
+  .nav-links a:hover {
+    color: #3498db; /* Couleur des liens de navigation au survol */
+  }
+  
+  /* Style pour le texte légal */
+  .legal p {
+    margin: 0;
+    font-size: 14px;
+    color: #ecf0f1; /* Couleur du texte légal */
+  }
+  

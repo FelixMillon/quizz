@@ -1,0 +1,31 @@
+/* Style pour le conteneur principal */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 4px solid #333333; /* Bordure plus sombre */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour donner du relief */
+  }
+  
+  /* Style pour le titre de la question */
+  div h4 {
+    font-size: 20px;
+    color: #153961;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style pour l'application des réponses */
+  app-reponse {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  

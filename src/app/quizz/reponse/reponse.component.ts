@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { QuizzService } from '../services/quizz.service';
+import { QuizzService } from '../quizz.service';
 @Component({
   selector: 'app-reponse',
   templateUrl: './reponse.component.html',

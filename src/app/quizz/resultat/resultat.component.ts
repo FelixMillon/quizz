@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizzService } from '../services/quizz.service';
+import { QuizzService } from '../quizz.service';
 @Component({
   selector: 'app-resultat',
   templateUrl: './resultat.component.html',

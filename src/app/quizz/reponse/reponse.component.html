@@ -1,0 +1,17 @@
+<ul appNameResponse>
+  <li *ngFor="let reponse of reponses">
+    <label class="radio-container">
+      <input
+        type="radio"
+        [name]="'question' + i"
+        [value]="reponse"
+        (change)="this.addResponse(i, reponse)"
+      />
+      <span>{{ reponse }}</span>
+    </label>
+  </li>
+<li>
+    <p *ngIf="responsed"> repondu en : {{ this.startDate | timer}} secondes</p>
+</li>
+</ul>
+

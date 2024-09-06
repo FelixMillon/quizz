@@ -7,16 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
-import { QuizzComponent } from './quizz/quizz.component';
-import { ResultatComponent } from './resultat/resultat.component';
+import { QuizzComponent } from './quizz/quizz/quizz.component';
+import { ResultatComponent } from './quizz/resultat/resultat.component';
 import { HttpClientModule } from '@angular/common/http';
-import { QuestionComponent } from './question/question.component';
-import { ReponseComponent } from './reponse/reponse.component';
+import { QuestionComponent } from './quizz/question/question.component';
+import { ReponseComponent } from './quizz/reponse/reponse.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimerPipe } from './timer.pipe';
 import { NameResponseDirective } from './name-response.directive';
+import { ConfirmComponent } from './shared/popup/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { NameResponseDirective } from './name-response.directive';
     LoginComponent,
     TimerPipe,
     NameResponseDirective,
+    ConfirmComponent,
   ],
   imports: [
     BrowserModule,

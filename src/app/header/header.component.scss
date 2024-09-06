@@ -1,0 +1,74 @@
+/* Style pour l'en-tête */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le contenu horizontalement */
+  background-color: #153961; /* Couleur de fond de l'en-tête */
+  color: #ffffff; /* Couleur du texte */
+  padding: 20px;
+  border-bottom: 4px solid #004080; /* Bordure en bas de l'en-tête */
+  position: relative; /* Positionnement relatif pour les éléments absolus éventuels */
+}
+
+/* Style pour le logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Espacement sous le logo */
+}
+
+/* Style pour la navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments de la navigation */
+}
+
+/* Style pour la liste de navigation */
+nav ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Affiche les éléments de la liste horizontalement */
+  gap: 15px; /* Espacement entre les éléments de la liste */
+}
+
+/* Style pour chaque élément de la liste */
+nav ul li {
+  margin: 0;
+}
+
+/* Style pour les liens de navigation */
+nav ul li a {
+  text-decoration: none; /* Supprime la sous-ligne des liens */
+  color: #ffffff; /* Couleur des liens */
+  font-size: 16px; /* Taille de la police des liens */
+  transition: color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+nav ul li a:hover {
+  color: #add8e6; /* Couleur des liens au survol */
+}
+
+/* Style pour le texte de connexion/déconnexion */
+nav p {
+  margin: 10px 0; /* Espacement autour du texte */
+  font-size: 14px;
+}
+
+/* Style pour les boutons */
+.contact-button {
+  background-color: #004080; /* Couleur de fond des boutons */
+  color: #ffffff; /* Couleur du texte des boutons */
+  border: none;
+  border-radius: 5px; /* Coins arrondis des boutons */
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer; /* Curseur pointeur pour indiquer que le bouton est cliquable */
+  transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.contact-button:hover {
+  background-color: #002f5f; /* Couleur de fond au survol */
+}

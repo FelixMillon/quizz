@@ -1,0 +1,20 @@
+<div *ngIf="!questionnaire">Chargement...</div>
+<div *ngIf="questionnaire">
+    <div *ngFor="let item of questionnaire | async; let i = index">
+        <app-question [question]="item" [i]="i" [startDate]="startDate"></app-question>
+    </div>
+</div>
+<div>
+    <button (click)="this.calculateScore();this.redirectToResult();" >Afficher le score</button>
+    <button (click)="this.resetAnswers()">Réinitialiser</button>
+</div>
+
+<app-confirm *ngIf="validate" (valueSubmitted)="getResponse($event)" >
+    <div popup-header>
+        Avez vous terminé ?
+        <button md-button (click)="this.validate = false;" class="close-button">X</button>
+    </div>
+    <div popup-content>
+        Confirmez pour aller au resultat.
+    </div>
+</app-confirm>

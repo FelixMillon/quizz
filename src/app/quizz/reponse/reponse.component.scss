@@ -1,0 +1,75 @@
+/* Style pour le conteneur de réponses */
+ul[appNameResponse] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+  }
+  
+  /* Style pour chaque élément de la liste */
+  ul[appNameResponse] li {
+    flex: 0 0 48%; /* Chaque élément prend environ la moitié de la largeur disponible (2 colonnes) */
+    margin-bottom: 10px;
+  }
+  
+  /* Style pour le conteneur de chaque option radio */
+  .radio-container {
+    display: flex;
+    align-items: center;
+    background-color: #e5f0ff; /* Fond bleu clair */
+    border: 2px solid #153961; /* Bordure bleu foncé */
+    padding: 10px;
+    border-radius: 4px; /* Coins légèrement arrondis pour le conteneur */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .radio-container:hover {
+    background-color: #d1e3f8; /* Changement de fond au survol */
+  }
+  
+  /* Style pour les boutons radio */
+  ul[appNameResponse] input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #153961; /* Couleur de l'accent des boutons radio */
+    width: 20px; /* Largeur du bouton radio pour le rendre carré */
+    height: 20px; /* Hauteur du bouton radio pour le rendre carré */
+    cursor: pointer;
+    appearance: none; /* Supprime le style par défaut des boutons radio */
+    border: 2px solid #153961; /* Bordure du bouton radio */
+    border-radius: 2px; /* Coins légèrement arrondis pour obtenir une forme carrée */
+    background-color: white; /* Couleur de fond du bouton radio */
+    position: relative;
+  }
+  
+  /* Style pour les boutons radio cochés */
+  ul[appNameResponse] input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #153961; /* Couleur de remplissage lorsque coché */
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+  }
+  
+  /* Style pour le texte de chaque option */
+  ul[appNameResponse] span {
+    font-size: 18px; /* Augmente la taille de la police */
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style pour le paragraphe de réponse */
+  p {
+    font-size: 20px;
+    color: #222222;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
