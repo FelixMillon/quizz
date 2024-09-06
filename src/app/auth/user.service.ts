@@ -14,12 +14,13 @@ export class UserService {
       throw new Error()
     }
     this.httpClient.post<User>('http://localhost:3000/users', user).subscribe();
+    console.log("ok")
   }
   login(user: User): Observable<User> {
     if(typeof(user.password) != "string"){
       throw new Error()
     }
-    return this.httpClient.get<User>('http://localhost:3000/users?username=' + user.email + '&password=' + user.password);
+    return this.httpClient.get<User>('http://localhost:3000/users?email=' + user.email + '&password=' + user.password);
   }
   getName(): string | null {
     const name =  localStorage.getItem("name")

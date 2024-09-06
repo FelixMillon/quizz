@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../auth/user.service';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,8 +8,13 @@ import { UserService } from '../auth/user.service';
 })
 export class HeaderComponent {
   constructor(
-    private userService: UserService
-  ) { }
+    private userService: UserService,
+    private translateService: TranslateService,
+  ) { 
+
+  }
+  langages = ["en", "fr"]
+  selectedLangage = "en"
   name: string | null = this.getName()
   getName(): string | null {
     if(this.userService.isConnected()){
@@ -20,5 +26,9 @@ export class HeaderComponent {
   
   disconnect(): void {
     this.userService.disconnect()
+  }
+
+  changeLangage(): void {
+    this.translateService.use(this.selectedLangage);
   }
 }
