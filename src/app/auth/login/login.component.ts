@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.myForm.valid) {
       if(
           typeof( this.myForm.value.email) == "string"

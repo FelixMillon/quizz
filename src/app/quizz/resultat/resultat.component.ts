@@ -10,16 +10,16 @@ export class ResultatComponent implements OnInit {
     private quizzService: QuizzService
   ) {}
 
-  ngOnInit() {
+  ngOnInit() : void {
     this.quizzService.scoreSubject?.subscribe(score => {
       this.result = score;
-      this.mention = this.getMention(score);
+      this.mention = this.getMention();
     });
   }
-  result = this.quizzService.score
+  result: number | undefined = this.quizzService.score
   date? : Date
-  mention = "undefined"
-  getMention(score: number): string{
+  mention: string = "undefined"
+  getMention(): string{
     this.result = this.quizzService.score
     this.date = new Date()
     if(typeof this.result === 'number'){

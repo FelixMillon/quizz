@@ -12,8 +12,8 @@ export class ReponseComponent {
   @Input() reponses: string[] = []
   @Input() i: number = 0
   @Input() startDate: Date = new Date()
-  responsed = false
-  addResponse(key: number, resp: string){
+  responsed: boolean = false
+  addResponse(key: number, resp: string): void {
     this.responsed = false;
     this.responsed = true;
     this.quizzService.addResponse(key,resp)

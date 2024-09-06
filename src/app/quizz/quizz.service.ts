@@ -13,7 +13,7 @@ export class QuizzService {
   userAnswers: Response = {};
   scoreSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   score?: number;
-  calculateScore(){
+  calculateScore(): void {
     let score = 0;
     this.questionnaire.subscribe((data) => {
       data.forEach((item, index) => {
@@ -31,7 +31,7 @@ export class QuizzService {
     this.score = undefined;
   }
 
-  addResponse(key: number, resp: string){
+  addResponse(key: number, resp: string): void {
     this.userAnswers[key] = resp
   }
 }

@@ -27,21 +27,20 @@ export class RegisterComponent implements OnInit {
       {validator: this.checkPasswordsMatch}
     );
   }
-  get getErrorLabel() {
+  get getErrorLabel(): string {
     if (this.myForm.errors?.['required']) return 'Les champs sont obligatoires';
     if (!!this.myForm.errors?.['email']) return 'Email doit être valide.';
     if (!!this.myForm.controls?.['password']?.errors?.['minlength']) return `La longueur minimal pour votre mot de passe est ${this.myForm.controls?.['password']?.errors?.['minlength']?.requiredLength}`;
     if (this.myForm.errors?.['missMatch']) return 'Les mots de passe ne correspondent pas';
     return 'Un problème est survenu';
   }
-  checkPasswordsMatch(form: FormGroup) {
-
+  checkPasswordsMatch(form: FormGroup): Object | null {
     return form.get('password')?.value === form.get('confirmPassword')?.value
     ? null
     : {missMatch: true}
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.myForm.valid) {
       if(
           typeof( this.myForm.value.email) == "string"

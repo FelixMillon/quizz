@@ -9,8 +9,8 @@ export class HeaderComponent {
   constructor(
     private userService: UserService
   ) { }
-  name = this.getName()
-  getName(){
+  name: string | null = this.getName()
+  getName(): string | null {
     if(this.userService.isConnected()){
       return this.userService.getName()
     }else{
@@ -18,7 +18,7 @@ export class HeaderComponent {
     }
   }
   
-  disconnect(){
+  disconnect(): void {
     this.userService.disconnect()
   }
 }

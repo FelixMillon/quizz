@@ -18,20 +18,22 @@ export class QuizzComponent{
 
 // faire getter coté service
 // subscribe ici pour maj questionnaire
-  startDate = new Date()
+  startDate: Date = new Date()
   questionnaire: Observable<Question[]> = this.quizzService.questionnaire
 
   userAnswers: Response = this.quizzService.userAnswers
   score: number | undefined = this.quizzService.score
   validate: boolean = false
 
-  async calculateScore(){
+  async calculateScore(): Promise<void> {
     this.quizzService.calculateScore()
   }
-  resetAnswers(){
+
+  resetAnswers(): void {
     this.quizzService.resetAnswers()
   }
-  async getResponse(response: boolean){
+
+  async getResponse(response: boolean): Promise<void> {
     this.validate = response;
     if(this.validate){
       await this.quizzService.calculateScore()
@@ -39,9 +41,8 @@ export class QuizzComponent{
     }
   }
 
-  redirectToResult() {
+  redirectToResult(): void {
     this.validate = true
-
   }
 
 }
