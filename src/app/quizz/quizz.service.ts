@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Question, Response } from '../types'
+import { Question, Response, Questionnaire } from '../types'
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class QuizzService {
   constructor( private httpClient:HttpClient ) {}
-  questionnaire: Observable<Question[]> = this.httpClient.get<Question[]>('http://localhost:3000/questionnaire')
+  questionnaire: Observable<Questionnaire> = this.httpClient.get<Questionnaire>('http://localhost:3000/questionnaire')
 
   userAnswers: Response = {};
   scoreSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);

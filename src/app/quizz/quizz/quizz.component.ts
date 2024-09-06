@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizzService } from '../quizz.service';
 import { ConfirmComponent } from '../../shared/popup/confirm/confirm.component';
-import { Question, Response } from '../../types';
+import { Questionnaire, Response } from '../../types';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-quizz',
@@ -19,7 +19,7 @@ export class QuizzComponent{
 // faire getter coté service
 // subscribe ici pour maj questionnaire
   startDate: Date = new Date()
-  questionnaire: Observable<Question[]> = this.quizzService.questionnaire
+  questionnaire: Observable<Questionnaire> = this.quizzService.questionnaire
 
   userAnswers: Response = this.quizzService.userAnswers
   score: number | undefined = this.quizzService.score

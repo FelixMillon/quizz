@@ -4,6 +4,8 @@ export interface Question {
   correct: string;
 }
 
+export interface Questionnaire extends Array<Question>{}
+
 export interface User {
   name: string;
   email: string;
